@@ -21,12 +21,30 @@
     <ClCompile Include="pointcloud_demo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="demos.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pcd_io_demos.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ToLeft.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point_cloud_filter.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="pointcloud_demo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demos.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pcd_io_demos.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ToLeft.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

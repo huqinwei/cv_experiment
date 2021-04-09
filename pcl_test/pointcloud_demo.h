@@ -18,7 +18,11 @@ void create_4points();//基础点云操作
 
 void connect_pointcloud();
 void connect_pointcloud2();
-void connect_pointcloud_ptr_save();
-void connect_pointcloud_ptr();
+
+//创建点云，存储文件
+void create_pointcloud_and_save();
+
+//读取文件，点云加法
+void load_and_save_point_cloud();
 
 

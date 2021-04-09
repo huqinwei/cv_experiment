@@ -7,10 +7,14 @@ void create_4points()
 {
 
 	pcl::PointCloud<pcl::PointXYZ> cloud;
-	cloud.push_back(pcl::PointXYZ(1.11, 1.12, 1.13));
-	cloud.push_back(pcl::PointXYZ(2.11, 2.12, 2.13));
-	cloud.push_back(pcl::PointXYZ(3.11, 3.12, 3.13));
-	cloud.push_back(pcl::PointXYZ(4.11, 4.12, 4.13));
+    cloud.push_back(pcl::PointXYZ(1.11, 1.12, 1.13));
+    std::cout << "width:" << cloud.width << std::endl;
+    cloud.push_back(pcl::PointXYZ(2.11, 2.12, 2.13));
+    std::cout << "width:" << cloud.width << std::endl;
+    cloud.push_back(pcl::PointXYZ(3.11, 3.12, 3.13));
+    std::cout << "width:" << cloud.width << std::endl;
+    cloud.push_back(pcl::PointXYZ(4.11, 4.12, 4.13));
+    std::cout << "width:" << cloud.width << std::endl;
 
 	std::cout << "cloud:\n" << cloud << std::endl;
 	std::cout << "width:" << cloud.width << std::endl;
@@ -161,7 +165,7 @@ void connect_pointcloud2()//非ptr格式
 }
 
 
-void connect_pointcloud_ptr_save()//ptr格式
+void create_pointcloud_and_save()//ptr格式
 {
 
 	//pcl::PointCloud<pcl::PointXYZ> cloud_a;//XYZ字段
@@ -210,7 +214,7 @@ void connect_pointcloud_ptr_save()//ptr格式
 	pcl::io::savePCDFile("1.pcd", cloud_b);
 
 }
-void connect_pointcloud_ptr()//ptr格式
+void load_and_save_point_cloud()//ptr格式
 {
 	pcl::PointCloud<pcl::PointXYZ>::Ptr c1(new pcl::PointCloud<pcl::PointXYZ>);
 	pcl::PointCloud<pcl::PointXYZ>::Ptr c2(new pcl::PointCloud<pcl::PointXYZ>);
@@ -227,6 +231,20 @@ void connect_pointcloud_ptr()//ptr格式
 	{
 		*c3 += combine_point[i];
 	}
+
+    //可以动用加法
+    pcl::PointCloud<pcl::PointXYZ> cloud_d;
+    cloud_d.width = 2;
+    cloud_d.height = cloud_d.height = 1;
+    cloud_d.points.resize(cloud_d.width*cloud_d.height);
+    for (size_t i = 0; i < cloud_d.points.size(); ++i)
+    {
+        cloud_d.points[i].x = i;
+        cloud_d.points[i].y = i;
+        cloud_d.points[i].z = i;
+    }
+    *c3 += cloud_d;
+
 	pcl::io::savePCDFile("c3.pcd", *c3);
 
 }
