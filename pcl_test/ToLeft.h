@@ -1,9 +1,11 @@
 #pragma once
 
+//个人博客对应位置：https://blog.csdn.net/huqinweI987/article/details/115538917
+
 #include <pcl/point_types.h>
 /*#include "point_types"*/
 
-//https://www.xuetangx.com/learn/THU08091000327/THU08091000327/5883587/video/9215695
+//学堂在线课程：https://www.xuetangx.com/learn/THU08091000327/THU08091000327/5883587/video/9215695
 
 //in-triangle test，三个toleft都是真，就是in triangle了，但是在三角形边上呢？
 
